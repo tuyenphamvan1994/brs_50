@@ -21,3 +21,17 @@
 
 en:
   hello: "Hello world"
+  layout:
+    base_title: "Review Book System"
+    home: "Home"
+    log-in: "Log in"
+    sign-up: "Sign Up"
+    framgia: "Framgia Vietnam Co., Ltd"
+    address: "13F Keangnam Landmark 72 Tower, Plot E6, Pham Hung Road, Nam Tu Liem District., Ha Noi"
+    phone: "Phone: "
+    phone-number: "84-4-3795-5417"
+  static-pages:
+    home:
+      slogan: "This is the home page training Book Review System of Framgia"
+      welcome: "Welcome to the Review Book System"
+      sign-now: "Sign up now!"
