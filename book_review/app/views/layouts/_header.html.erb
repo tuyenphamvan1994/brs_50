@@ -1,0 +1,17 @@
+<header class="navbar navbar-fixed-top navbar-inverse header-pages">
+  <div class="container">
+    <%= link_to t("layout.base_title"), root_path , class: "logo" %>
+    <nav>
+      <ul class="nav nav-list navbar-right">
+        <li class="nav-item">
+          <a class="search-book" href="#">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li class="nav-item"><%= link_to t("layout.home"), root_path, class: "nav-item-home"%></li>
+        <li class="nav-item"><%= link_to t("layout.log-in"), "#" %></li>
+        <li class="nav-item"><%= link_to t("layout.sign-up"), "#" %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
