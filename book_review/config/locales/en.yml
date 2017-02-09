@@ -35,3 +35,14 @@ en:
       slogan: "This is the home page training Book Review System of Framgia"
       welcome: "Welcome to the Review Book System"
       sign-now: "Sign up now!"
+  user:
+    new:
+      button_submit_new: "Create my account"
+      confirmation: "Confirmation"
+  shared:
+    error: "error"
+    contains: "The form contains "
+  controller:
+    user:
+      create: "Welcome to the Book Review System!"
+      not_user: "Not found User"

@@ -8,9 +8,11 @@
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
           </a>
         </li>
-        <li class="nav-item"><%= link_to t("layout.home"), root_path, class: "nav-item-home"%></li>
+        <li class="nav-item"><%= link_to t("layout.home"), root_path, 
+          class: "nav-item-home"%></li>
         <li class="nav-item"><%= link_to t("layout.log-in"), "#" %></li>
-        <li class="nav-item"><%= link_to t("layout.sign-up"), "#" %></li>
+        <li class="nav-item"><%= link_to t("layout.sign-up"), 
+          signup_path %></li>
       </ul>
     </nav>
   </div>
