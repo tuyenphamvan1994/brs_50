@@ -30,6 +30,11 @@ en:
     address: "13F Keangnam Landmark 72 Tower, Plot E6, Pham Hung Road, Nam Tu Liem District., Ha Noi"
     phone: "Phone: "
     phone-number: "84-4-3795-5417"
+    header:
+      account: "Account"
+      profile: "Profile"
+      setting: "Settings"
+      logout: "Log out"
   static-pages:
     home:
       slogan: "This is the home page training Book Review System of Framgia"
@@ -46,3 +51,4 @@ en:
     user:
       create: "Welcome to the Book Review System!"
       not_user: "Not found User"
+    sessions: "Invalid email/password combination"
