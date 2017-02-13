@@ -11,6 +11,18 @@
         <li class="nav-item"><%= link_to t("layout.home"), root_path, 
           class: "nav-item-home"%></li>
         <% if logged_in? %>
+          <% if current_user.is_admin? %>
+            <li class="nav-item" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <%= t "layout.category" %><b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to t(".new"), new_admin_category_path %></li>
+                <li class="divider"></li>
+                <li><%= link_to t(".all_category"), admin_categories_path %></li>
+              </ul>
+            </li>
+          <% end %>
           <li class="nav-item" class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <%= t "layout.header.account" %> <b class="caret"></b>
@@ -25,7 +37,7 @@
             </ul>
           </li>
         <% else %>
-          <li class="nav-item"><%= link_to t("layout.log-in"), login_path%></li>
+          <li class="nav-item"><%= link_to t("layout.log-in"), login_path %></li>
           <li class="nav-item"><%= link_to t("layout.sign-up"), 
             signup_path %></li>
         <% end %>

@@ -35,6 +35,17 @@ en:
       profile: "Profile"
       setting: "Settings"
       logout: "Log out"
+    category: "Category"
+    categories:
+      edit: "Edit Category"
+      h1: "Update Category"
+      save: "Save change"
+      new: "New category"
+      all: "All Category"
+      btn_edit: "edit"
+      btn_delete: "delete"
+    msg_del: "Are you want delete Category"
+
   static-pages:
     home:
       slogan: "This is the home page training Book Review System of Framgia"
@@ -52,3 +63,12 @@ en:
       create: "Welcome to the Book Review System!"
       not_user: "Not found User"
     sessions: "Invalid email/password combination"
+    categories:
+      create: "Create Category success"
+      delete: "Category deleted"
+      update: "Category updated"
+      found: "Not found Category"
+  layouts:
+    header:
+      new: "New"
+      all_category: "All Category"

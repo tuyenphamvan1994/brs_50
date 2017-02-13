@@ -1,0 +1,15 @@
+<% provide :title, t("layout.categories.all") %>
+<h1><%= t "layout.categories.all" %></h1>
+  <ul class= "category">
+    <% @categories.each do |category| %>
+      <li class="col-md-12">
+       <div id= "category", class="col-md-8"><%= category.name %> </div>
+       <div class="col-md-1"><%= link_to t("layout.categories.btn_edit"),
+         edit_admin_category_path(category), class: "btn btn-info" %></div>
+       <div class="col-md-1"><%= link_to t("layout.categories.btn_delete"), 
+         admin_category_path(category),method: :delete, 
+         data: {confirm: t("layout.msg_del")}, 
+         class: "btn btn-danger" %></div>
+      </li>
+    <% end %>
+  </ul>
