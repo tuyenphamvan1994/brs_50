@@ -1,0 +1,15 @@
+<div class= "row">
+  <div class="col-md-12">
+    <div class="col-md-4 ">
+      <%= image_tag @book.image.url if @book.image? %>
+    </div>
+    <div class="col-md-7 ">
+      <h1><%= @book.title %></h1>
+      <h3><%= t ".author" %><%= @book.author %></h3>
+      <h3><%= t ".number_page" %><%= @book.number_page %></h3>
+      <h3><%= t ".publish_date" %><%= l @book.publish_date %></h3>
+      <h3><%= t ".category" %><%= @book.category.name %></h3>
+      <p><%= t ".description" %><%= @book.description %></p>
+    </div>
+  </div>
+</div>

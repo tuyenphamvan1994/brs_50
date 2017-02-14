@@ -3,6 +3,7 @@ class CreateBooks < ActiveRecord::Migration[5.0]
     create_table :books do |t|
       t.string :title
       t.datetime :publish_date
+      t.string :description
       t.string :author
       t.integer :number_page
       t.string :image

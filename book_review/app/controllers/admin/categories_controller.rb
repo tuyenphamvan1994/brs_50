@@ -1,4 +1,5 @@
 class Admin::CategoriesController < ApplicationController
+  before_action :logged_in_user, :verify_admin
   before_action :load_category, only: [:edit, :update, :destroy]
   
   def index
