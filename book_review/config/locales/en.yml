@@ -68,7 +68,16 @@ en:
       delete: "Category deleted"
       update: "Category updated"
       found: "Not found Category"
+    book:
+      not_found_book: "Books not found!"
   layouts:
     header:
       new: "New"
       all_category: "All Category"
+  book:
+    list_book:
+      no_book: "There are no books in Category"
+      author: "Author: "
+      all_book: "All Books"
+      category: "Categories"
+      list_book: "List Book"

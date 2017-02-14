@@ -1,0 +1,38 @@
+<div class="menu_cate">
+  <nav class = "cate_menu">
+    <h2><%= t "book.list_book.category" %></h2>
+    <% @categories.all.each do |category| %>
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" >
+          <%= link_to category.name, book_index_path(category: category.name) %>
+        </li>
+      </ul>
+    <% end %>
+  </nav>
+</div>
+
+<% if @category_id %>
+  <h1><%= params[:category] %></h1>
+<% else %>
+  <h1><%= t "book.list_book.all_book" %></h1>
+<% end %>
+
+<div class="row list_book">
+  <% if !@books.any? %>
+    <h1><%= t "book.list_book.no_book" %></h1>
+  <% else %>
+    <% @books.each do |book| %>
+      <div class="col-sm-6 col-md-3">
+        <ul class="list_view_book">
+          <li>
+            <a href="<%= book_path(book) %>">
+              <%= image_tag book.image , alt: book.title , class: "images_book" %>
+            </a>
+          </li>
+          <li><%= link_to book.title, book_path(book) %></li>
+          <li><%= t "book.lits_book.author" %> <%= link_to book.author, "#" %></li>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+</div>
