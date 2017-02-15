@@ -1,7 +1,11 @@
 class StaticPagesController < ApplicationController
   def show
     if valid_page?
-      render template: "static_pages/#{params[:page]}"
+      if logged_in?
+        redirect_to book_index_path
+      else
+        render template: "static_pages/#{params[:page]}"
+      end
     else
       render file: "public/404.html", status: :not_found
     end
