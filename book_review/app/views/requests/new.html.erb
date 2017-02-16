@@ -1,0 +1,17 @@
+<% provide :title, t(".new") %>
+<% provide :button_text, t(".send_req") %>
+
+<h1><%= t ".send" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @request, html: {multipart: true} do |f| %>
+      <%= render "shared/error_messages", target: @request %>
+
+      <%= f.label :name_book %>
+      <%= f.text_field :name_book, class: "form-control" %>
+  
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

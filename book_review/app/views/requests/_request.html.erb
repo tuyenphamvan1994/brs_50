@@ -1,0 +1,20 @@
+<tr>
+  <td><%= request.name_book %></td>
+  <td class ="center">
+    <% if request.pending? %>
+      <h4><span class="label label-warning"><%= t ".pending" %></span></h4>
+    <% elsif request.accept? %>
+      <h4><span class="label label-success"><%= t ".approve" %></span></h4>
+    <% else %>
+      <h4><span class="label label-danger"><%= t ".reject" %></span></h4>
+    <% end %>
+  </td>
+  <td class="center">
+    <% if request.pending? %>
+      <%= link_to t("requests.partial_request.cancel"), 
+        request, method: :delete,
+        data: {confirm: t("confirm")}, remote: true,
+        class: "btn btn-size btn-danger delete_request" %>
+    <% end %>
+  </td>
+</tr>
