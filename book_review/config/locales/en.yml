@@ -76,6 +76,10 @@ en:
       found: "Not found Category"
     book:
       not_found_book: "Books not found!"
+    reviews:
+      add: "Review was added!!!"
+      destroy: "Review was deleted!!!"
+      find: "Review not found"
   layouts:
     header:
       new: "New"
@@ -92,6 +96,14 @@ en:
       all_category: "All Categories"
       book: "Books"
       all_book: "All Books"
+    show:
+      author: "Author: "
+      category: "Category: "
+      pages: "Pages: "
+      pages2: " pages"
+      publish: "Publish date: "
+      rate: "Ratting: "
+      review: "Review Users"
 
   admin:
     books:
@@ -153,3 +165,16 @@ en:
   time:
     formats:
       default: "%d-%m-%y"
+  reviews:
+    reviews:
+      cofirm_delete: "Are you sure?"
+      delete: "Delete"
+      edit: "Edit"
+      rate: "Rate: "
+    show:
+      new_review: "New Review"
+    form:
+      input_review: "Input new Review..."
+    edit: "Edit Review"
+    new: "New Review"
+    create: "Create Review"

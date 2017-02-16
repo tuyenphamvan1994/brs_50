@@ -4,14 +4,15 @@
     <% @supports.categories.each do |category| %>
       <ul class="nav nav-pills nav-stacked">
         <li role="presentation" >
-          <%= link_to category.name, book_index_path(category: category.name) %>
+          <%= link_to category.name, 
+            books_path(category: category.name) %>
         </li>
       </ul>
     <% end %>
   </nav>
 </div>
 
-<% if @category_id %>
+<% if @supports.category params[:category] %>
   <h1><%= params[:category] %></h1>
 <% else %>
   <h1><%= t "book.list_book.all_book" %></h1>
@@ -26,7 +27,7 @@
         <ul class="list_view_book">
           <li>
             <a href="<%= book_path(book) %>">
-              <%= image_tag book.image , alt: book.title , class: "images_book" %>
+              <%= image_tag book.image.url, alt: book.title , class: "images_book" %>
             </a>
           </li>
           <li><%= link_to book.title, book_path(book) %></li>

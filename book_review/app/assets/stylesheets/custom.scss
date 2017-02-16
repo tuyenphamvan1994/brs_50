@@ -156,3 +156,28 @@ body {
 .table_request{
   margin-top: 30px;
 }
+
+.images_book_detail{
+  height: 340px;
+  width: 220px;
+  margin-top: 50px;
+}
+
+.details_book{
+  margin-top: 50px;
+  h1, h2{
+   text-align: left;
+    margin-bottom: 15px;
+  }
+}
+
+.review_book{
+  margin-top: 40px;
+  h1{
+    text-align: left;
+    font-size: 2.2em;
+  }
+  .rate{
+    color: yellow;
+  }
+}

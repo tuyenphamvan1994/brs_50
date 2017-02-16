@@ -1,4 +1,4 @@
-class BookController < ApplicationController
+class BooksController < ApplicationController
   before_action :find_book, only: [:show]
   def index
     @supports = Supports::Book.new @book
@@ -6,11 +6,12 @@ class BookController < ApplicationController
       Book.all : @supports.category(params[:category]).books
     if params[:category] && @supports.category(params[:category]).nil?
       flash[:warning] = t "not_category"
-      redirect_to book_index_path
+      redirect_to books_path
     end
   end
 
   def show
+    @supports = Supports::Book.new @book
   end
 
   private
@@ -19,9 +20,9 @@ class BookController < ApplicationController
   end
   def find_book
     @book = Book.find_by id: params[:id]
-    if @book.nil?
+    unless @book
       flash[:warning] = t("controller.book.not_found_book")
-      redirect_to book_index_path
+      redirect_to books_path
     end
   end
 end

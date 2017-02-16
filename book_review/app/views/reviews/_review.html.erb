@@ -1,0 +1,22 @@
+<h4><%= link_to review.user.name, user_path(review.user_id) %></h4>
+<h5 class="rate"> <%= t "reviews.reviews.rate" %>
+  <% review.rate.times do %>
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+  <% end %>
+</h5>
+<h5><%= review.review %></h5>
+<% if logged_in? %>
+  <% if review.user_id == current_user.id %>
+    <%= link_to t("reviews.reviews.edit"), 
+      edit_book_review_path(review.book, review) %>
+    <%= link_to t("reviews.reviews.delete"), 
+      book_review_path(review.book, review), 
+      method: :delete, data: {confirm: 
+      t("reviews.reviews.cofirm_delete")} %>
+  <% elsif current_user.is_admin? %> 
+    <%= link_to t("reviews.reviews.cofirm_delete"), 
+      book_review_path(review.book, review), 
+      method: :delete, data: {confirm: 
+      t("reviews.reviews.cofirm_delete")} %>
+  <% end %>
+<% end %>
