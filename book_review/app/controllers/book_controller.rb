@@ -1,9 +1,13 @@
 class BookController < ApplicationController
   before_action :find_book, only: [:show]
   def index
-    @categories = Category.all
-    @category_id = params[:category].blank? ? nil : Category.find_by(name: params[:category]).id
-    @books = @category_id.nil? ? Book.all : (Book.load_book_from_category_id @category_id)
+    @supports = Supports::Book.new @book
+    @books = @supports.category(params[:category]).nil? ? 
+      Book.all : @supports.category(params[:category]).books
+    if params[:category] && @supports.category(params[:category]).nil?
+      flash[:warning] = t "not_category"
+      redirect_to book_index_path
+    end
   end
 
   def show

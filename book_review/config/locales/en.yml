@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  not_category: "not Category"
+  please_log_in: "Please log in"
+  user_not_admin: "User not admin"
+  new_book: "New Book"
   hello: "Hello world"
   layout:
     base_title: "Review Book System"
@@ -81,3 +85,43 @@ en:
       all_book: "All Books"
       category: "Categories"
       list_book: "List Book"
+      all_category: "All Categories"
+      book: "Books"
+      all_book: "All Books"
+
+  admin:
+    books:
+      new:
+        new_book: "New Book"
+        save: "Save Book"
+      edit: 
+        new_book: "New Book"
+        save: "Save change"
+      index: 
+        all: "All Book"
+        edit: "edit"
+        delete: "delete"
+        confirm: "Are you want delete Book?"
+      show:
+        author: "Author: "
+        number_page: "Number page: "
+        publish_date: "Publish date: "
+        category: "Category: "
+        description: "description: "
+      form:
+        category: "select a category"
+        save: "Save"
+
+  controllers:
+    admin:
+      books:
+        create: "Create Book Successful"
+        update: "Update Book Successful"
+        not_update: "Can't Update"
+        not_new: "Can't New book"
+        not_found: "Not found"
+        not_found_category: "Not found Category"
+
+  time:
+    formats:
+      default: "%d-%m-%y"

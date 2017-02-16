@@ -1,0 +1,17 @@
+<% provide :title, t(".all") %>
+<h1><%= t ".all" %></h1>
+<ul class= "category">
+  <% @books.each do |book| %>
+    <li class="col-md-12">
+      <div id= "category", class="col-md-8">
+        <%= link_to book.title, admin_book_path(book) %> </div>
+      <div class="col-md-1"><%= link_to t(".edit"),
+        edit_admin_book_path(book), class: "btn btn-info" %></div>
+      <div class="col-md-1"><%= link_to t(".delete"), 
+        admin_book_path(book), method: :delete, 
+        data: {confirm: t(".confirm")}, 
+        class: "btn btn-danger" %></div>
+    </li>
+  <% end %>
+  <%= will_paginate @books %>
+</ul>
