@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :categories, except: [:show]
     resources :books
+    resources :requests, only: [:index, :update]
   end
 
   resources :users , only: [:show]
+  resources :requests, except: [:edit, :update, :show]
 end

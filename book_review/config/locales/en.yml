@@ -20,6 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  request: "Request Book"
+  confirm: "Are you want cancel Request"
   not_category: "not Category"
   please_log_in: "Please log in"
   user_not_admin: "User not admin"
@@ -78,6 +80,8 @@ en:
     header:
       new: "New"
       all_category: "All Category"
+      request: "All Request Book"
+
   book:
     list_book:
       no_book: "There are no books in Category"
@@ -111,6 +115,13 @@ en:
       form:
         category: "select a category"
         save: "Save"
+    requests:
+      index: 
+        all_requests: "All Request"
+        book_name: "Book name"
+        user: "User"
+        accept: "accept"
+        refuse: "refuse"
 
   controllers:
     admin:
@@ -121,7 +132,24 @@ en:
         not_new: "Can't New book"
         not_found: "Not found"
         not_found_category: "Not found Category"
-
+    request:
+      create: "Send request successful!"
+      not_create: "Now create request"
+  requests:
+    index:
+      requests: "All Request"
+      new: " New request"
+      name: "Book name"
+      status: "Status"
+    new:
+      new: "New request"
+      send: Send a new request
+      send_req: "Send request"
+    partial_request: 
+      cancel: "Cancel"
+      pending: "Pending"
+      approve: "Approve"
+      reject: "Reject"
   time:
     formats:
       default: "%d-%m-%y"

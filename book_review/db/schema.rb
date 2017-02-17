@@ -71,10 +71,10 @@ ActiveRecord::Schema.define(version: 20170207075725) do
 
   create_table "requests", force: :cascade do |t|
     t.string   "name_book"
-    t.integer  "status"
+    t.integer  "status",     default: 0
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.index ["user_id"], name: "index_requests_on_user_id"
   end
 

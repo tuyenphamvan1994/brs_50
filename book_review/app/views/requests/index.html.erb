@@ -1,0 +1,24 @@
+<% provide :title, t(".requests") %>
+<h1><%= t ".requests" %></h1>
+
+<div class="row">
+  <div class="button col-md-2 col-md-offset-10">
+    <%= link_to t(".new"), new_request_path, class: "btn btn-primary" %>
+  </div>
+
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table table-bordered table_request">
+      <thead>
+        <tr class="info">
+          <th class="center col-md-7"><%= t ".name" %></th>
+          
+          <th class="center col-md-2"><%= t ".status" %></th>
+          <th class="center col-md-1"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @requests %>
+      </tbody>
+    </table>
+  </div>
+</div>
