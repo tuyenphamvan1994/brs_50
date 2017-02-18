@@ -1,0 +1,10 @@
+<%= form_for [@book , @review] do |f| %>
+  <%= render "shared/error_messages", target: @review %>
+    <%= f.select :rate, 
+    options_for_select(Settings.ratings.min_rate..Settings.ratings.max_rate, 
+    selected: @review.rate), {include_blank: t("user.reviews.blank")},
+    class: "form-control" %>
+  <%= f.text_area :review, placeholder: 
+    t("reviews.form.input_review"), class: "form-control" %>
+  <%= f.submit t("reviews.create") , class: "btn btn-primary" %>
+<% end %>

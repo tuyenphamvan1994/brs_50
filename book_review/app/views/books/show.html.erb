@@ -1,0 +1,29 @@
+<% provide :title, @book.title %>
+<div class="row">
+
+  <div class="col-md-4">
+    <%= image_tag @book.image.url, alt: @book.title , class: "images_book_detail" %>
+  </div>
+
+  <div class="col-md-8 details_book">
+    <h1><%= @book.title %></h1>
+    <h2><%= t "book.show.author" %><%= @book.author %></h2>
+    <h2><%= t "book.show.category" %><%= @book.category.name %></h2>
+    <h2><%= t "book.show.pages" %><%= @book.number_page %>
+      <%= t "book.show.pages2" %></h2>
+    <h2><%= t "book.show.publish" %><%= l @book.publish_date %> </h2>
+    <h2><%= t "book.show.rate" %><%= 
+      @supports.avarge_rate @book.reviews %></h2>
+    <p><%= @book.description %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 review_book">
+    <h1><%= t "book.show.review" %></h1>
+    <%= render @book.reviews %>
+    <br>
+    <%= link_to t("review.show.new_review"), 
+      new_book_review_path(@book), class: "btn btn-primary" %>
+  </div>
+</div>
