@@ -3,6 +3,10 @@
 
   <div class="col-md-4">
     <%= image_tag @book.image.url, alt: @book.title , class: "images_book_detail" %>
+    <section>
+      <%= render "favorite_books/form_favorite" %>
+      <h5><%= t "book.show.favorite" %><%= @book.favorite_books.count %></5>
+    </section>
   </div>
 
   <div class="col-md-8 details_book">
@@ -17,6 +21,8 @@
     <p><%= @book.description %></p>
   </div>
 </div>
+
+<hr class="hr_book">
 
 <div class="row">
   <div class="col-md-4 review_book">

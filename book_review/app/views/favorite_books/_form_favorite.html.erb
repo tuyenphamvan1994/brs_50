@@ -1,0 +1,5 @@
+<% if current_user.favorite_books.include? @favorite %>
+  <%= render "favorite_books/unfavorite" %>
+<% else %>
+  <%= render "favorite_books/favorite" %>
+<% end %>

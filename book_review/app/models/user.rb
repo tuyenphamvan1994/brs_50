@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :relationships
 
+  has_many :favorite_books, dependent: :destroy
+
   has_many :active_relationships, class_name: Relationship.name,
     foreign_key: "follower_id", dependent: :destroy
   has_many :passive_relationships, class_name: Relationship.name,

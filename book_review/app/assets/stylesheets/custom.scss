@@ -7,15 +7,15 @@
   box-sizing: border-box;
 }
 
-.nav-item{
+.nav-item {
   float: left;
   font-size: 15px;
   font-weight: bold;
 }
-.header-pages{
+.header-pages {
   background: #FFFFFF;
 }
-.nav-item-home{
+.nav-item-home {
   color: #00FF99;
 }
 
@@ -68,14 +68,14 @@ p {
     margin-bottom: 10px;
   }
 }
-.infor{
+.infor {
   text-align: center;
 }
-.logo-footer{
+.logo-footer {
   text-align: center;
 }
 
-.footer{
+.footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
@@ -134,50 +134,78 @@ body {
     border-bottom: 1px solid $gray-lighter;
   }
 }
-#category{
+#category {
   text-align: left;
 }
 
-.images_book{
+.images_book {
   height: 240px;
   width: 150px;
 }
 
-.cate_menu{
+.cate_menu {
   float: right;
   min-width: 200px;
   min-height: 1000px;
 }
 
-.list_view_book{
+.list_view_book {
   list-style: none;
 }
 
-.table_request{
+.table_request {
   margin-top: 30px;
 }
 
-.images_book_detail{
+.images_book_detail {
   height: 340px;
   width: 220px;
   margin-top: 50px;
 }
 
-.details_book{
+.details_book {
   margin-top: 50px;
-  h1, h2{
+  h1, h2 {
    text-align: left;
     margin-bottom: 15px;
   }
 }
 
-.review_book{
+.review_book {
   margin-top: 40px;
-  h1{
+  h1 {
     text-align: left;
     font-size: 2.2em;
   }
-  .rate{
+  .rate {
     color: yellow;
   }
+}
+
+.hr_book {
+  background-color: black;
+  height: 1px;
+  border: 0;
+}
+
+.unfavorite_icon {
+  color: red;
+}
+
+.favorite_icon {
+  color: red;
+}
+
+.btn_favorite {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.glyphicon-heart-empty {
+  font-size: 2em;
+}
+
+.glyphicon-heart {
+  font-size: 2em;
 }
