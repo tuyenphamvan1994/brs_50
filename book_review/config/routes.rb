@@ -11,12 +11,13 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
    
+ resources :relationships, only: [:index, :create, :destroy]
   namespace :admin do
     resources :categories, except: [:show]
     resources :books
     resources :requests, only: [:index, :update]
   end
 
-  resources :users , only: [:show]
+  resources :users, only: [:index, :show, :destroy]
   resources :requests, except: [:edit, :update, :show]
 end
