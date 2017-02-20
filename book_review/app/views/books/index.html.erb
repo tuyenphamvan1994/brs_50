@@ -1,2 +1,13 @@
 <% provide :title, t("book.list_book.list_book") %>
+<div class="form-inline col-md-4 search">
+  <%= form_tag books_path, remote:true, method: :get do %>
+    <div class= " col-md-7 "><%= text_field_tag :search, params[:search],
+      placeholder: t(".search"), class: "form-control" %></div>
+    <div class= "submit_tag col-md-4 btn_submit "><%= submit_tag t(".btn_search"), 
+      class: "btn btn-primary" %></div>
+  <% end %>
+</div>
+<div class="list_book">
 <%= render "list_book" %>
+</div>
+

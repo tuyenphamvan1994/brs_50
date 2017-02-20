@@ -4,7 +4,7 @@ class Admin::BooksController < ApplicationController
   before_action :load_categories, except: [:index, :show, :destroy]
 
   def index
-    @books = Book.paginate page: params[:page]
+    @books = Book.search_by_title(params[:search]).paginate page: params[:page]
   end
 
   def new

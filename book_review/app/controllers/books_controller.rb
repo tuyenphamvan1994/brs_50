@@ -1,10 +1,12 @@
 class BooksController < ApplicationController
   before_action :find_book, only: [:show]
   before_action :find_favorite, only: [:show]
+  
   def index
     @supports = Supports::Book.new @book
-    @books = @supports.category(params[:category]).nil? ? 
-      Book.all : @supports.category(params[:category]).books
+    category = @supports.category params[:category]
+    @books = (category.nil? ? Book.search_by(params[:search]) : 
+      category.books).paginate(page: params[:page])
     if params[:category] && @supports.category(params[:category]).nil?
       flash[:warning] = t "not_category"
       redirect_to books_path

@@ -1,17 +1,24 @@
 <% provide :title, t(".all") %>
 <h1><%= t ".all" %></h1>
-<ul class= "category">
-  <% @books.each do |book| %>
-    <li class="col-md-12">
-      <div id= "category", class="col-md-8">
-        <%= link_to book.title, admin_book_path(book) %> </div>
-      <div class="col-md-1"><%= link_to t(".edit"),
-        edit_admin_book_path(book), class: "btn btn-info" %></div>
-      <div class="col-md-1"><%= link_to t(".delete"), 
-        admin_book_path(book), method: :delete, 
-        data: {confirm: t(".confirm")}, 
-        class: "btn btn-danger" %></div>
-    </li>
-  <% end %>
-  <%= will_paginate @books %>
-</ul>
+  <div class="container" >
+    <div class="row">
+      <%= form_tag admin_books_path, remote: true, method: :get do %>
+        <span class="center col-md-3 col-md-offset-1" >
+          <%= text_field_tag :search, params[:search],
+            placeholder: t(".search"), class: "form-control" %>
+        </span>
+        <span class=" col-md-1" >
+          <%= submit_tag t(".btn_search"), class: "btn btn-primary" %>
+        </span>
+      <% end %>
+      <span class=" col-md-4"></span>
+      <span class=" col-md-2">
+        <%= link_to t(".new"), new_admin_book_path, class: "btn btn-primary" %>
+      </span>
+    </div>
+  </div>
+  <div class="books">
+    <%= render "list_book" %>
+  </div>
+
+        

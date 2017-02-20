@@ -1,12 +1,12 @@
 class User < ApplicationRecord
   before_save :downcase_email
-  has_many :requests
-  has_many :activities
-  has_many :likes
-  has_many :statuses
-  has_many :comments
-  has_many :reviews
-  has_many :relationships
+  has_many :requests, dependent: :destroy
+  has_many :activities, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :statuses, dependent: :destroy
+  has_many :comments, dependent: :destroy
+  has_many :reviews, dependent: :destroy
+  has_many :relationships, dependent: :destroy
 
   has_many :favorite_books, dependent: :destroy
 
