@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  not_new_user: "Can't new user"
+  unfollow: "Unfollow"
+  follow: "follow"
   request: "Request Book"
   confirm: "Are you want cancel Request"
   not_category: "not Category"
@@ -68,6 +71,7 @@ en:
     user:
       create: "Welcome to the Book Review System!"
       not_user: "Not found User"
+      delete: "User deleted"
     sessions: "Invalid email/password combination"
     categories:
       create: "Create Category success"
@@ -88,6 +92,18 @@ en:
       new: "New"
       all_category: "All Category"
       request: "All Request Book"
+      users: "Users"
+  shared:
+    stats:
+      following: "following"
+      followers: "followers"
+  users:
+    index: 
+      all_user: "All users"
+      delete: "delete"
+      you_sure: "You sure"
+    show_follow:
+      view: "view my profile"
 
   book:
     list_book:
@@ -151,6 +167,10 @@ en:
     request:
       create: "Send request successful!"
       not_create: "Now create request"
+    relationship:
+      not_found_user: "can't found user"
+      not_found_user_follow: "can't found user follow"
+      not_followed: "Not followed user to unfollow"
   requests:
     index:
       requests: "All Request"
