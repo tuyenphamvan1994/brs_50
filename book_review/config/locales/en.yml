@@ -80,6 +80,9 @@ en:
       add: "Review was added!!!"
       destroy: "Review was deleted!!!"
       find: "Review not found"
+    favorite_book:
+      not_destroy: "Not destroy Favorite"
+      not_find_favorite: "Not Find Favorite"
   layouts:
     header:
       new: "New"
@@ -104,6 +107,7 @@ en:
       publish: "Publish date: "
       rate: "Ratting: "
       review: "Review Users"
+      favorite: "Favorites: "
 
   admin:
     books:

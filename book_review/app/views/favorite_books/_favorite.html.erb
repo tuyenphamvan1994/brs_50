@@ -1,0 +1,6 @@
+<%= form_for [@book, current_user.favorite_books.build] do |f| %>
+  <%= f.hidden_field :book_id, value: @book.id %>
+  <%= button_tag class: "btn_favorite" do %>
+    <span class="glyphicon glyphicon-heart-empty favorite_icon"></span>
+  <% end %>
+<% end %>

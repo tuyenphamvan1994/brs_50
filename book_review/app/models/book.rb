@@ -4,6 +4,8 @@ class Book < ApplicationRecord
   has_many :reviews
   has_many :statuses
 
+  has_many :favorite_books, dependent: :destroy
+
   mount_uploader :image, ImageUploader
   
   validates :image, presence: true

@@ -1,0 +1,6 @@
+<%= form_for [@book, @favorite], html:{method: :delete} do |f| %>
+  <%= f.hidden_field :book_id, value: @book.id %>
+  <%= button_tag class: "btn_favorite" do %>
+    <span class="glyphicon glyphicon-heart unfavorite_icon"></span>
+  <% end %>
+<% end %>
