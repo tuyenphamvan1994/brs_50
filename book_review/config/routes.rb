@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :books do
     resources :reviews
     resources :favorite_books
+    resources :comments
   end
   root "static_pages#show", page: "home"
   get "/static_pages/*page", to: "static_pages#show"

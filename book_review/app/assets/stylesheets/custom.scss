@@ -172,13 +172,16 @@ body {
 }
 
 .review_book {
-  margin-top: 40px;
+  margin-top: 10px;
   h1 {
     text-align: left;
     font-size: 2.2em;
   }
   .rate {
     color: yellow;
+  }
+  h2 {
+    text-align: left;
   }
 }
 
@@ -209,6 +212,7 @@ body {
 .glyphicon-heart {
   font-size: 2em;
 }
+
 /* sidebar */
 aside {
   section.user_info {
@@ -298,4 +302,31 @@ aside {
 }
 .search {
   margin-top: 30px;
+}
+
+.tb_menu_review {
+  text-align: right;
+}
+
+#comment_comment {
+  margin: 0 0 0 100px;
+  width: 85%;
+}
+
+.review_review {
+  font-weight: bold;
+}
+
+.tb_comment {
+  margin-left: 100px;
+}
+
+.btn_update_comment {
+  width: 50px;
+}
+
+.edit_comment {
+  border: none;
+  background: none;
+  color: #337ab7
 }

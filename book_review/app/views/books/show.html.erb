@@ -25,11 +25,12 @@
 <hr class="hr_book">
 
 <div class="row">
-  <div class="col-md-4 review_book">
+  <div class="col-md-8 review_book">
     <h1><%= t "book.show.review" %></h1>
-    <%= render @book.reviews %>
-    <br>
+    <h2><%= @book.reviews.count %> reviews</h2>
     <%= link_to t("review.show.new_review"), 
       new_book_review_path(@book), class: "btn btn-primary" %>
+    <br>
+    <%= render "reviews/review" %>
   </div>
 </div>

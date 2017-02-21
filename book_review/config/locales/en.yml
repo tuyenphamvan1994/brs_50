@@ -220,3 +220,10 @@ en:
     edit: "Edit Review"
     new: "New Review"
     create: "Create Review"
+  comments:
+    comments: " comments"
+    save: "Save"
+    not_save: "Comment is not saved"
+    not_update: "Comment is not not update"
+    not_found_comment: "Comment is not found"
+    not_delete: "Comment is not delete"
