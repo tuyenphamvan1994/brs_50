@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table table-bordered table_request">
+      <thead>
+        <tr class="info">
+          <th class="center col-md-7"><%= t".title" %></th>
+          <th class="center col-md-2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @books.each do |book| %>
+          <tr>
+            <td class ="center">  
+              <%= link_to book.title, admin_book_path(book) %>
+            </td>
+            <td>
+              <%= link_to t(".edit"),
+                edit_admin_book_path(book), class: "btn btn-info" %>
+              <%= link_to t(".delete"), 
+                admin_book_path(book), method: :delete, 
+                data: {confirm: t(".confirm")}, 
+                class: "btn btn-danger" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -93,6 +93,7 @@ en:
       all_category: "All Category"
       request: "All Request Book"
       users: "Users"
+      all_book: "All book"
   shared:
     stats:
       following: "following"
@@ -127,6 +128,15 @@ en:
 
   admin:
     books:
+      list_book: 
+        title: "title"
+        edit: "edit"
+        delete: "delete"
+        confirm: "Are you want delete book"
+      book: 
+        edit: "edit"
+        delete: "delete"
+        confirm: "Are you want delete Book?"
       new:
         new_book: "New Book"
         save: "Save Book"
@@ -138,6 +148,10 @@ en:
         edit: "edit"
         delete: "delete"
         confirm: "Are you want delete Book?"
+        search: "Search for title"
+        btn_search: "Search"
+        new: "New"
+        title: "Title"
       show:
         author: "Author: "
         number_page: "Number page: "
@@ -154,6 +168,10 @@ en:
         user: "User"
         accept: "accept"
         refuse: "refuse"
+  books:
+    index:
+      search: "Search for author,title"
+      btn_search: "search"
 
   controllers:
     admin:
