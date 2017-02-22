@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :books do
-    resources :reviews
-    resources :favorite_books
-    resources :comments
+    resources :reviews, except: [:show, :index]
+    resources :favorite_books, only: [:create, :destroy]
+    resources :comments, except: [:show, :index]
   end
   root "static_pages#show", page: "home"
   get "/static_pages/*page", to: "static_pages#show"

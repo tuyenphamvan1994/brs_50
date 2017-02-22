@@ -8,7 +8,7 @@
     <td>
       <h5 class="rate"> <%= t "reviews.reviews.rate" %>
         <% review.rate.times do %>
-         <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
        <% end %>
      </h5>
     </td>
@@ -32,7 +32,10 @@
   </tr>
 </table>
 <h5 class="review_review"><%= review.review %></h5>
-<%= render "comments/show_comment", review: review %>
-<%= render "comments/form_comment", review: review %>
-<hr>
+<div class="show_comments">
+  <%= render "comments/show_comment", review: review %>
+</div>
+<div class="comment_form row">
+  <%= render "comments/form_comment", review: review %>
+</div>
 <% end %>

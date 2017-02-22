@@ -7,7 +7,10 @@ class CommentsController < ApplicationController
     unless @comment.save
       flash[:danger] = t "comments.not_save"
     end
-    redirect_to @comment.review.book
+    respond_to do |format|
+      format.html {redirect_to @comment.review.book}
+      format.js
+    end
   end
 
   def update
@@ -17,8 +20,9 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html {redirect_to @comment.review.book}
       format.js
+    end
   end
-
+  
   def destroy
     unless @comment.destroy
       flash[:danger] = t "comments.not_delete"
